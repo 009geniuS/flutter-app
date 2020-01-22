@@ -1,103 +1,94 @@
 import 'package:flutter/material.dart';
+import 'package:idol/botoomnavigationbar.dart';
+import 'package:idol/p1.dart';
+import 'package:idol/p2.dart';
+import 'package:idol/p3.dart';
+import 'package:idol/p4.dart';
+import 'package:idol/p5.dart';
+import 'package:idol/p6.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  final appTitle = 'Drawer Demo';
-
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: appTitle,
-      home: Prac2(),
-      debugShowCheckedModeBanner: false,
+
+    return new MaterialApp(
       
-    );
-  }
-}
-class Prac2 extends StatefulWidget{
-  _Prac2state createState()=>_Prac2state();
-  }
-class _Prac2state extends State<Prac2> {
- 
-final  _children = [
-   practicle1(),
-   practicle2(),
-   practicle3(),
-   practicle1(),
-
- ];
-  
-int ci=0;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
       
-      body: _children[ci],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: ci,
-
-        items: [
-          
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text('HOME'),
-            backgroundColor: Colors.blue,
-            
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            title: Text('SEARCH'),
-            backgroundColor: Colors.red,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.camera),
-            title: Text('CAMERA'),
-            backgroundColor: Colors.green,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            title: Text('PERSON'),
-            backgroundColor: Colors.yellow,
-          )
-        ],
-        onTap: (index){
-          setState(() {
-            ci=index;
-          });
-        },
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: new MyHomePage(),
     );
   }
 }
-class practicle1 extends StatelessWidget{
-  @override
+class MyHomePage extends StatelessWidget {
+   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(title: new Text("practicle1"),),
-      
-      body: Center(child: Text("hello how are you??"),),
-    );
-  }
-}
-class practicle3 extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(title: new Text("practicle3"),),
-      
-      body: Center(child: Text("hello how are you??"),),
-    );
-  }
-}
-class practicle2 extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(title: new Text("practicle2"),),
-      
-      body: Center(child: Text("hello how are you??"),),
+      appBar: AppBar(title: new Text('drawer1'),),
+      drawer: new Drawer(
+       
+       child: ListView(
+         children: <Widget>[
+           DrawerHeader(
+             child: Text("Practicles"),
+             decoration: BoxDecoration(color: Colors.blue),
+           ),
+           ListTile(
+             title: Text("pra1"),
+             onTap: (){
+               Navigator.pop(context);
+               Navigator.push(context, new MaterialPageRoute(builder: (context)=>new Prac1()));
+             }, 
+           ),
+           ListTile(
+             title: Text('prac2'),
+             onTap: (){
+               Navigator.pop(context);
+               Navigator.push(context, new MaterialPageRoute(builder: (context)=>new Prac2()));
+             },
+           ),
+           ListTile(
+             title: Text('prac3'),
+             onTap: (){
+               Navigator.pop(context);
+               Navigator.push(context, new MaterialPageRoute(builder: (context)=>new Prac3()));
+             }
+           ),
+           ListTile(
+             title: Text('prac4'),
+             onTap: (){
+               Navigator.pop(context);
+               Navigator.push(context, new MaterialPageRoute(builder: (context)=>new Practical4()));
+             },
+           ),
+           ListTile(
+             title: Text('prac5'),
+             onTap: (){
+               Navigator.pop(context);
+               Navigator.push(context, new MaterialPageRoute(builder: (context)=>new Practical5()));
+             },
+           ),
+           ListTile(
+             title: Text('prac6'),
+             onTap: (){
+               Navigator.pop(context);
+               Navigator.push(context, new MaterialPageRoute(builder: (context)=>new Practical6()));
+             },
+           ),
+           ListTile(
+             title: Text('Bottom navigation bar'),
+             onTap: (){
+               Navigator.pop(context);
+               Navigator.push(context, new MaterialPageRoute(builder: (context)=>new Pbnb2()));
+             },
+           )
+         ]
+       )
+     )
     );
   }
 }
