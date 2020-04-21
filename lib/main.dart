@@ -1,21 +1,24 @@
-import 'package:flutter/material.dart';
-import 'package:idol/botoomnavigationbar.dart';
-import 'package:idol/p1.dart';
-import 'package:idol/p2.dart';
-import 'package:idol/p3.dart';
-import 'package:idol/p4.dart';
-import 'package:idol/p5.dart';
-import 'package:idol/p6.dart';
-import 'package:idol/p7.dart';
-import 'package:idol/p8.dart';
-import 'package:idol/p9.dart';
-import 'package:idol/p10.dart';
-import 'package:idol/p11.dart';
-import 'package:idol/p12.dart';
 import 'package:idol/p13.dart';
-import 'package:idol/p14.dart';
-import 'package:idol/p15.dart';
-import 'package:idol/y1.dart';
+
+import 'p1.dart';
+import 'botoomnavigationbar.dart';
+import 'p2.dart';
+import 'p3.dart';
+import 'p4.dart';
+import 'p5.dart';
+import 'p6.dart';
+import 'p7.dart';
+import 'p8.dart';
+import 'p9.dart';
+import 'p10.dart';
+import 'p11.dart';
+import 'p12.dart';
+import 'p13.dart';
+import 'p14.dart';
+import 'y1.dart';
+import 'package:flutter/material.dart';
+
+
 
 void main() => runApp(MyApp());
 
@@ -135,7 +138,7 @@ class MyHomePage extends StatelessWidget {
              title: Text('prac6'),
              onTap: (){
                Navigator.pop(context);
-               Navigator.push(context, new MaterialPageRoute(builder: (context)=>new Practical13()));
+               Navigator.push(context, new MaterialPageRoute(builder: (context)=>new Practical3());
              },
            ),
            ListTile(
