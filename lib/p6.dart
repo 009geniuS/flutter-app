@@ -21,7 +21,7 @@ class _Practical6State extends State<Practical6> {
             onPressed: Torch.turnOn,
           ),
           RaisedButton(
-            onPressed:Torch.turnOn,
+            onPressed:Torch.turnOff,
             child: Text('OFF'),
           )
         ]

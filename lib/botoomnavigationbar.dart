@@ -50,7 +50,7 @@ int ci=0;
           setState(() {
             ci=index;
           });
-        },
+        }
       )
     );
   }

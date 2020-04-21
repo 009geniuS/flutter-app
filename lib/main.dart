@@ -6,6 +6,16 @@ import 'package:idol/p3.dart';
 import 'package:idol/p4.dart';
 import 'package:idol/p5.dart';
 import 'package:idol/p6.dart';
+import 'package:idol/p7.dart';
+import 'package:idol/p8.dart';
+import 'package:idol/p9.dart';
+import 'package:idol/p10.dart';
+import 'package:idol/p11.dart';
+import 'package:idol/p12.dart';
+import 'package:idol/p13.dart';
+import 'package:idol/p14.dart';
+import 'package:idol/p15.dart';
+import 'package:idol/y1.dart';
 
 void main() => runApp(MyApp());
 
@@ -80,11 +90,74 @@ class MyHomePage extends StatelessWidget {
              },
            ),
            ListTile(
+             title: Text('prac6'),
+             onTap: (){
+               Navigator.pop(context);
+               Navigator.push(context, new MaterialPageRoute(builder: (context)=>new Practical7()));
+             },
+           ),
+           ListTile(
+             title: Text('prac6'),
+             onTap: (){
+               Navigator.pop(context);
+               Navigator.push(context, new MaterialPageRoute(builder: (context)=>new Practical8()));
+             },
+           ),
+           ListTile(
+             title: Text('prac6'),
+             onTap: (){
+               Navigator.pop(context);
+               Navigator.push(context, new MaterialPageRoute(builder: (context)=>new Practical9()));
+             },
+           ),
+           ListTile(
+             title: Text('prac6'),
+             onTap: (){
+               Navigator.pop(context);
+               Navigator.push(context, new MaterialPageRoute(builder: (context)=>new Practical10()));
+             },
+           ),
+           ListTile(
+             title: Text('prac6'),
+             onTap: (){
+               Navigator.pop(context);
+               Navigator.push(context, new MaterialPageRoute(builder: (context)=>new Practical11()));
+             },
+           ),
+           ListTile(
+             title: Text('prac6'),
+             onTap: (){
+               Navigator.pop(context);
+               Navigator.push(context, new MaterialPageRoute(builder: (context)=>new Practical12()));
+             },
+           ),
+           ListTile(
+             title: Text('prac6'),
+             onTap: (){
+               Navigator.pop(context);
+               Navigator.push(context, new MaterialPageRoute(builder: (context)=>new Practical13()));
+             },
+           ),
+           ListTile(
+             title: Text('prac6'),
+             onTap: (){
+               Navigator.pop(context);
+               Navigator.push(context, new MaterialPageRoute(builder: (context)=>new Practical14()));
+             },
+           ),
+           ListTile(
              title: Text('Bottom navigation bar'),
              onTap: (){
                Navigator.pop(context);
                Navigator.push(context, new MaterialPageRoute(builder: (context)=>new Pbnb2()));
-             },
+             }
+           ),
+           ListTile(
+             title: Text('Bottom navigation bar'),
+             onTap: (){
+               Navigator.pop(context);
+               Navigator.push(context, new MaterialPageRoute(builder: (context)=>new y1()));
+             }
            )
          ]
        )
